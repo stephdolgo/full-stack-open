@@ -62,4 +62,51 @@ What happens when a note is submitted at [Example App](https://studies.cs.helsin
 
 ## Exercise 0.5: Single Page App
 
+![Diagram of adding a new note](assets/05-SPA.png)
+
+<details>
+    <summary>Diagram Code</summary>
+<p> 
+    title 0.5 Single Page App
+
+    browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+    server-->browser: spa.html
+    browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    server-->browser: main.css
+    browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    server-->browser: spa.js
+    note over browser:
+    JS runs and requests notes.json
+    end note
+    browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    server-->browser: data.json [ { content: "is", date: "2022-05-27T16:02:32.632Z" }, ...]
+    note over browser:
+    Notes list rendered
+    end note
+</p>
+</details>
+
+
 ## Exercise 0.6: New Note - SPA
+
+![Diagram of adding a new note](assets/06-SPAnote.png)
+
+<details>
+    <summary>Diagram Code</summary>
+<p> 
+    title 0.6 Single Page App: New Note
+
+    note over browser:
+    Event handler is added when form is submitted
+    a) JS prevents default redirect POST 
+    b) Sends note to server as JSON-string
+    end note
+
+    browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    server-->browser: 201 (no redirect)
+
+    note over browser:
+    Notes page is re-rendered with new note
+    end note
+</p>
+</details>
