@@ -1,7 +1,9 @@
 # FullStackOpen
-Exercises for learning modern web app development with ReactJS.
+Exercises for learning modern web app development with ReactJS. 
 
-- [ ] Part 0: Fundamentals of Web apps
+I have experiences with Vue.JS, but my goal is to improve my knowledge of web apps and the React-library.
+
+- [x] Part 0: Fundamentals of Web apps
 - [ ] Part 1: Introduction to React
 - [ ] Part 2: Communicating with server
 - [ ] Part 3: Programming a server with NodeJS and Express
